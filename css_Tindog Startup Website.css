@@ -1,0 +1,141 @@
+body{
+    font-family: "Montserrat"; font-weight: 400;
+    text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat"; font-weight: 700;
+}
+p{
+    color: #8f8f8f;
+}
+
+/* Headings */
+.big-heading{
+    font-family: "Montserrat"; font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+.section-heading{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+/* Containers */
+.container-fluid{
+    padding: 7% 15%;
+}
+
+/* Sections */
+.colored-section{
+    background-color: #ff4c68;
+    color: #fff; /* #fff = white color. #000 = black color. */
+}
+.white-section{
+    background-color: #fff; /* By default, the color of weside is not white, it is close to white. So, we have to give it a color to use 'z-index'. */
+}
+
+/* Navigation Bar */
+.navbar{
+    padding: 0 0 4.5rem; /* top = 0, left & right = 0, bottom = 4.5rem */
+}
+.navbar-brand{
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.nav-item{
+    padding: 0 18px;
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-family: "Montserrat"; font-weight: 300;
+}
+
+/* Download Buttons */
+.download-button{
+    margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+#title .container-fluid{ /* This will be applied to "container-fluid" class of only "title" id. */
+    padding: 3% 15% 7%;
+    text-align: left;
+}
+
+/* Title Image */
+.title-image{
+    width: 23%; /* Adjust according to requirement. */
+    transform: rotate(25deg); /* +ve 25 degree */
+    /*z-index: -1;*/ /* By default, 'z-index' of an element is 0. So, to make it go behind other things, we have to make its 'z-index' -1. */
+    position: absolute; /* If we don't use 'position', 'z-index' will not work. */
+    right: 25%; /* Adjust according to requirement. It is used to bring the image in same lavel (in right) as the nav bar. */
+}
+
+/* Features Section */
+#features{    
+    position: relative; /* If we don't use 'position', 'z-index' will not work. */
+    /*z-index: 1;*/ /* As its 'z-index' is 1, it will go up of the title-image. If we don't use 'z-index: 1', then also it will go up of the title-image. */
+}
+.feature-title{
+    font-size: 1.5rem;
+}
+.feature-box{    
+    padding: 4.5%;
+}
+.icon{
+    color: #ef8172;
+    margin-bottom: 1rem;
+}
+.icon:hover{
+    color: #ff4c68;
+}
+
+/* Testimonial Section */
+#testimonials{ /* 'id's are the most specific & their styles get applied preferentiall over everything else. */
+    background-color: #ef8172;    
+}
+.testimonial-text{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.testimonial-image{
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+#press{
+    background-color: #ef8172;    
+    padding-bottom: 3%;
+}
+.press-logo{
+    width: 15%;
+    margin: 20px 20px 50px;
+}
+
+/* Pricing Section */
+#pricing{
+    padding: 100px;    
+}
+.price-text{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.pricing-column{
+    padding: 3% 2%;
+}
+
+/* Footer Section */
+.social-icon{
+    margin: 20px 10px;
+}
+
+@media (max-width: 991px){ /* Adjust 'max-width' according to requirement. In this laptop, tab size limit (max.) is 991px. */
+    #title{
+        text-align: center;
+    }
+    .title-image{
+        position: static;
+        transform: rotate(0); /* It brings the image to original position. */
+    }
+}
